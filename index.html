@@ -12,29 +12,45 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #f0f4f8;
+      background-color: #0d1f3c; /* deep blue background */
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #ffffff;
     }
 
     .container {
       text-align: center;
-      background-color: #ffffff;
-      padding: 50px 80px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      background-color: #1a2b4c; /* slightly lighter blue card */
+      padding: 60px 80px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
       max-width: 500px;
     }
 
+    .logo {
+      width: 80px;
+      height: 80px;
+      background-color: #1a73e8; /* bright blue logo circle */
+      border-radius: 50%;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
     h1 {
-      color: #1a73e8;
       font-size: 2.8em;
-      margin-bottom: 10px;
+      margin: 0 0 15px 0;
+      color: #1a73e8; /* bright accent blue */
     }
 
     p {
-      color: #555;
       font-size: 1.1em;
       margin-bottom: 30px;
+      color: #cbd6f0;
     }
 
     .btn {
@@ -42,21 +58,25 @@
       background-color: #1a73e8;
       color: white;
       text-decoration: none;
-      padding: 12px 30px;
-      border-radius: 8px;
+      padding: 14px 36px;
+      border-radius: 12px;
       font-weight: 600;
-      transition: background 0.3s ease;
+      font-size: 1em;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
       background-color: #1558b0;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
   </style>
 </head>
 <body>
   <div class="container">
+    <div class="logo">H</div>
     <h1>Welcome to HyperURL</h1>
-    <p>Your smart and simple link shortener.</p>
+    <p>Your smart, simple, and fast link shortener.</p>
     <a href="#" class="btn">Get Started</a>
   </div>
 </body>
