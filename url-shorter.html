@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HyperURL Support</title>
+<style>
+body { font-family: Arial; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; background:#f0f4f8; }
+.container { background:#1a2b4c; color:white; padding:30px; border-radius:15px; width:100%; max-width:450px; text-align:center; }
+input, textarea, button { width:100%; margin:10px 0; padding:12px; border-radius:6px; border:none; font-size:16px; }
+textarea { resize:none; }
+button { background:#1a73e8; color:white; cursor:pointer; font-weight:bold; }
+button:hover { background:#1558b0; }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Contact Support</h2>
+  <form id="supportForm">
+    <input type="text" id="subject" placeholder="Subject" required>
+    <textarea id="message" rows="6" placeholder="Describe your issue..." required></textarea>
+    <button type="submit">Send to Support</button>
+  </form>
+</div>
+
+<script>
+const supportEmail = "support@hyperurl.com";
+
+document.getElementById('supportForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const subject = encodeURIComponent(document.getElementById('subject').value);
+  const message = encodeURIComponent(document.getElementById('message').value);
+
+  // Opens default email client (Outlook, Gmail desktop, etc.)
+  // The email will be sent from whichever account is logged in
+  window.location.href = `mailto:${supportEmail}?subject=${subject}&body=${message}`;
+});
+</script>
+
+</body>
+</html>
