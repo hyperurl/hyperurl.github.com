@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HyperURL Support</title>
+<title>Create Shortened URL</title>
 <style>
 body { font-family: Arial; display:flex; justify-content:center; align-items:center; height:100vh; margin:0; background:#f0f4f8; }
 .container { background:#1a2b4c; color:white; padding:30px; border-radius:15px; width:100%; max-width:450px; text-align:center; }
@@ -16,16 +16,16 @@ button:hover { background:#1558b0; }
 <body>
 
 <div class="container">
-  <h2>Contact Support</h2>
+  <h2>Create Shortened URL</h2>
   <form id="supportForm">
     <input type="text" id="subject" placeholder="Subject" required>
-    <textarea id="message" rows="6" placeholder="Describe your issue..." required></textarea>
-    <button type="submit">Send to Support</button>
+    <textarea id="message" rows="6" placeholder="" required></textarea>
+    <button type="submit">Send</button>
   </form>
 </div>
 
 <script>
-const supportEmail = "support@hyperurl.com";
+const supportEmail = "hyperurl-su@outlook.com";
 
 document.getElementById('supportForm').addEventListener('submit', function(e) {
   e.preventDefault();
